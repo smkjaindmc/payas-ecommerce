@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Come on</title>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <style>
+          body{
+              background: url('/static/veg.jpg')
+          }
+          .cart{
+             margin-left: 28px;
+          }
+          .reward{
+              margin-left: 680px;
+          }
+          .account{
+              margin-left: 28px;
+          }
+          h3{
+              margin-top: 20px;
+              margin-left: 20px;
+          }
+          .hol{
+              margin-left: 180px;
+              margin-top: -35px;
+          }
+          .hed{
+              margin-left: 30px;
+              margin-top: 20px
+          }
+          .koi{
+              margin-left: 60px;
+          }
+          p{
+              margin-left: 150px;
+              margin-top: -20px;
+          }
+          .man{
+              margin-left:510px;
+              margin-top: 80px;
+              color: black;
+              background-color: white;
+              opacity: 0.5;
+              border-radius: 8px;
+              max-width: 600px;
+               
+          }
+          
+      </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'test' %}"><i class="fa fa-cutlery" aria-hidden="true"></i>
+Natural Fruit Shop(Menu)</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active reward">
+          <h5><a class="nav-link" href="{% url 'reward' %}"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+
+rewards <span class="sr-only">(current)</span></a></h5>
+      </li>
+      
+      <li class="nav-item active cart">
+          <h5><a class="nav-link" href="{% url 'carts' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+cart <span class="sr-only">(current)</span></a></h5>
+      </li>
+        <li class="nav-item active account">
+          <h5><a class="nav-link" href="{% url 'prof' %}"><i class="fa fa-user" aria-hidden="true"></i>account <span class="sr-only">(current)</span></a></h5>
+      </li>
+    </ul>
+      
+    <span class="navbar-text">
+        <h4>{{username.email}}</h4>
+    </span>
+      
+  </div>
+      
+</nav>
+        <div class='man'>
+        <h3>Username: </h3><h5 class="hol">{{username.username}}</h5>
+        <h3>Email-id: </h3><h5 class="hol">{{username.email}}</h5>
+        <h3>Last-login: </h3><h5 class="hol">{{last.timestamp}}</h5>
+        <h3>Previous orders</h3>
+                
+
+        
+                {% for item in data %}
+                        
+                    {% if item.products.all %}
+                            <h4 class='hed'>-> Items :</h4>
+                        
+                    {% for j in item.products.all %}
+                            <p>{{j}}</p>
+                    {% endfor %}
+                    
+                            <h5 class="koi">Date: Rs {{item.timestamp}}</h5>
+                            <h5 class="koi">Total: Rs {{item.total}}</h5>
+                            
+                    {% endif %}
+        
+                {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">  
+    <head>
+        <title>Killer Carousel Example</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        
+        <!-- Include jQuery -->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        
+        <!-- Include KillerCarousel CSS -->
+        <link href="/static/killercarousel.css" type="text/css" rel="stylesheet" />
+        
+        <!-- Include KillerCarousel JavaScript -->
+        <script type="text/javascript" src="/static/killercarousel.js"></script>
+        
+ 
+
+        <!-- Various page styles. -->
+        <style type="text/css">
+
+            body {
+                font-family: arial, sans-serif;
+                color: #777;
+                font-size: 16px;
+                padding:0px;
+                margin:0px;
+            }
+
+            p {
+                line-height: 20px;
+            }
+
+            code {
+                font-weight: bold;
+                color: #f44;;
+            }
+            a {
+                color:#3d8dde;
+            }
+
+            #wrapper {
+                padding:10px;
+            }
+        </style>
+
+        <!-- Styles for the Carousel -->
+        <style type = "text/css">
+
+            /* CSS for images inside item wrapper */
+            .kc-item img {
+                position:absolute;
+                pointer-events: none;   /* Make images non-selectable. */
+                width:100%;             /* Make images expand to wrapper size (used in 2d modes). */
+            }
+
+        </style>
+
+        <script type = "text/javascript">
+            // Create the carousel.
+            $(function() {
+                $('.kc-wrap').KillerCarousel({
+                    // Default natural width of carousel.
+                    width: 800,
+                    // Item spacing in 3d (has CSS3 3d) mode.
+                    spacing3d: 120,
+                    // Item spacing in 2d (no CSS3 3d) mode. 
+                    spacing2d: 120,
+                    showShadow: true,
+                    showReflection: true,
+                    // Looping mode.
+                    infiniteLoop: true,
+                    // Scale at 75% of parent element.
+                    autoScale: 75
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <div class="topper">
+            <header>
+  <img class="shop-sign"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/headerpic.svg" alt="Fake Fruit Shop Sign" />
+</header>
+        </div>
+        <div id="wrapper">
+            
+
+            <!-- The carouse wrapper -->
+            <div class = "kc-wrap">
+                <!-- Carousel items follow -->
+                <div class="kc-item">
+                    <img src="/static/images/image1.jpg" alt = "Salvator Mundi 1519">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image2.jpg" alt = "St. John the Baptist 1516">
+                </div> 
+                <div class="kc-item">
+                    <img src="/static/images/image3.jpg" alt = "Lady with an Ermine 1490">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image4.jpg" alt = "St. Jerome in the Wilderness 1480">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image5.jpg" alt = "Head of a Woman 1508">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image6.jpg" alt = "St. John the Baptist 1516">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/iimages/image7.jpg" alt = "The Virgin and Child with St Anne and St John the Baptist 1500">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image8.jpg" alt = "Madonna of the Yarnwinder 1507">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image9.jpg" alt = "The Virgin and Child with St. Anne 1508">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image10.jpg" alt = "Madonna of the Carnation 1480">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image11.jpg" alt = "La belle ferronnière 1496">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image12.jpg" alt = "Adoration of the Magi 1481">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image13.jpg" alt = "Portrait of a Musician 1490">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image14.jpg" alt = "Virgin of the Rocks 1486">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image15.jpg" alt = "Madonna of Laroque 1503">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image16.jpg" alt = "Benois Madonna 1478">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image17.jpg" alt = "Mona Lisa 1517">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image18.jpg" alt = "Portrait of a man in red chalk 1512">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image19.jpg" alt = "Ginevra de' Benci 1478">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image20.jpg" alt = "The Last Supper 1498">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image21.jpg" alt = "Annunciation 1475">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image22.jpg" alt = "The Battle of Anghiari 1505">
+                </div>
+                <div class="kc-item">
+                    <img src="/static/images/image23.jpg" alt = "Madonna Litta 1491">
+                </div>
+            </div>
+          
+            
+        </div>
+<h1>{{username}}</h1>
+    </body>
+</html>
+

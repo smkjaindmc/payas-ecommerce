@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Come on</title>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <style>
+          .fruit{
+            margin-left: -10px;
+              margin-top: 30px;
+            text-align: center;
+              
+          }
+          h1{
+              margin-left: 105px;
+          }
+          .juices{
+              margin-top: 40px;
+          }
+          .comment{
+              margin-left: 105px;
+          }
+          .cart{
+             margin-left: 28px;
+          }
+          .reward{
+              margin-left: 450px;
+          }
+          .account{
+              margin-left: 28px;
+          }
+          .logo{
+              margin-left: 28px;
+          }
+      </style>
+   
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><i class="fa fa-cutlery" aria-hidden="true"></i>
+Natural Fruit Shop(Menu)</a>
+             <a class="navbar-brand" href="{% url 'fruit' %}"><i class="fa fa-home" aria-hidden="true"></i>
+
+Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item active reward">
+          <h5><a class="nav-link" href="{% url 'reward' %}"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+
+rewards <span class="sr-only">(current)</span></a></h5>
+      </li>
+      
+      <li class="nav-item active cart">
+          <h5><a class="nav-link" href="{% url 'carts' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+cart <span class="sr-only">(current)</span></a></h5>
+      </li>
+        <li class="nav-item active account">
+          <h5><a class="nav-link" href="{% url 'prof' %}"><i class="fa fa-user" aria-hidden="true"></i>account <span class="sr-only">(current)</span></a></h5>
+      </li>
+        <li class="nav-item active logo">
+          <h5><a class="nav-link" href="{% url 'logo' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout <span class="sr-only">(current)</span></a></h5>
+      </li>
+    </ul>
+      
+    <span class="navbar-text">
+        <h4>{{username.email}}</h4>
+    </span>
+      
+  </div>
+      
+</nav>
+        <br><br>
+        <input type="text" class="comment input-lg " size="80" placeholder="Enter fruit name"> 
+        <button class="pen">Search</button>
+        <br><br><br><br>
+        <h1>Fruits</h1>
+        <div class='row'>
+        {% for i in product %}
+            <div class='man col-sm-3'>
+                <div class="fruit">
+                    <a href=""><img src="/static/media/{{i.image}}"></a>
+             <h4><a href="{% url 'single-toy' i.slug %}">{{i.title}}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+            <h1 class="juices">Juices</h1>
+        <div class='row kick'>
+        {% for i in juice %}
+            <div class='man col-sm-3'>
+                <div class="fruit">
+                    <a href=""><img src="/static/media/{{i.image}}"></a>
+             <h4><a href="{% url 'single-toy' i.slug %}">{{i.title}}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <h1 class="juices">Shakes</h1>
+        <div class='row goal'>
+        {% for i in shake %}
+            <div class='man col-sm-3'>
+                <div class="fruit">
+                    <a href=""><img src="/static/media/{{i.image}}"></a>
+                    <h4><a href="{% url 'single-toy' i.slug %}">{{i.title}}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <h1 class="juices">Cakes</h1>
+        <div class='row glue'>
+        {% for i in cake %}
+            <div class='man col-sm-3'>
+                <div class="fruit">
+                    <a href=""><img src="/static/media/{{i.image}}"></a>
+             <h4><a href="{% url 'single-toy' i.slug %}">{{i.title}}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+               <script>
+          var x=document.querySelector('.comment');
+          console.log(x)
+var w=document.querySelector('.row').getElementsByTagName('div');
+w=Array.from(w)
+console.log(Array.isArray(w))                   
+var f=document.querySelector('button');
+var y=document.querySelector('.kick').getElementsByTagName('div');
+var q=document.querySelector('.goal').getElementsByTagName('div');  
+var l=document.querySelector('.glue').getElementsByTagName('div');                    
+y=Array.from(y)    
+q=Array.from(q)
+l=Array.from(l)                   
+z=w.concat(y)                   
+z=z.concat(q)  
+z=z.concat(l)                   
+console.log(z)
+
+x.addEventListener("keyup",function(e){
+    y=e.target.value.toLowerCase();
+    for(var i=0;i<z.length;i++){
+        var p=z[i].querySelector('h4').textContent;
+        console.log(p);
+        var m=p.toLowerCase();
+        if(m.indexOf(y)!=-1){
+            z[i].style.display="block"
+        }
+        else{
+            z[i].style.display="none";
+        }
+        
+    }
+    
+});
+console.log(z)
+      </script>
+    </body>
+</html>

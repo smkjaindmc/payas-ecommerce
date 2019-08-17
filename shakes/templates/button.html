@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>this</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button-container-1 {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  overflow: hidden;
+  border: 1px solid;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+    border-radius: 10px;
+}
+.button-container-1 button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: #000;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+.mas {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+a {
+  color: white;
+}
+
+        </style>
+        
+    </head>
+    <body>
+         <div class="button-container-1">
+      <span class="mas">CLICK ME</span>
+    <button id='work' type="button" name="Hover"><a href="{% url 'about' %}">HOME</a></button>
+  </div>
+</body>
+</html>

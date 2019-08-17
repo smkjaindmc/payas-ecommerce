@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <title>Ship</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            h2{
+                margin-top: 20px;
+            }
+            select{
+                margin-top: 30px;
+            }
+            h5{
+                margin-top: 30px;
+            }
+            button{
+                margin-top: 30px;
+            }
+            body{
+                background: url('/static/back.jpg')
+            }
+            .cont{
+                margin-left: 580px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <h2>Add shipping adress</h2>
+            <select name='States' id=''>
+                <option value="Mp">Locality</option>
+                <option value="Mp">Gole Ka Mandir</option>
+                <option value="Mp">Hazeera</option>
+                <option value="Mp">City Center</option>
+                <option value="Mp">Tansen Nagar</option>
+                <option value="Mp">Lashkar</option>
+                <option value="Mp">Morar</option>
+                <option value="Mp">Bada</option>
+                <option value="Mp">Phoolbagh</option>
+                <option value="Mp">Railway station</option>
+                <option value="Mp">Mragnayani Garden</option>
+                <option value="Mp">Gast Ka Tazia</option>
+                <option value="Mp">Morena Link Road</option>
+                
+            </select>
+            <h5>Full Name</h5>
+            <input type='text' placeholder='enter name' size=50>
+            <h5>Mobile Number</h5>
+            <input type='digits' placeholder='10 digit mobile number without prefixes' size=50>
+            <h5>Pin Code</h5>
+            <input type='digits' placeholder='enter pincode' size=50>
+            <h5>Street adress</h5>
+            <input type='digits' placeholder='Flat/House no/floor/building name' size=50>
+            <br>
+            
+            <button type="button" class="btn btn-warning">Add address</button>
+        </div>
+    </body>
+</html>

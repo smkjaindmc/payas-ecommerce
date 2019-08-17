@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>Cart</title>
+        <style>
+            h4{
+                text-align: center;
+                margin-top: 10px;
+            }
+            .goa{
+                margin-left: 300px;
+            }
+            .del{
+                color: black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'test' %}"><i class="fa fa-cutlery" aria-hidden="true"></i>
+Natural Fruit Shop(Menu)</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      
+      
+    </ul>
+    <span class="navbar-text">
+        <h5>{{username.email}}</h5>
+    </span>
+  </div>
+      
+</nav>
+        <div class='col-sm-8 col-sm-offset-2 goa'>
+        
+            {% if cart.products.all %}
+            <table class='table'>
+            <thead>
+                <th>Item</th>
+                <th>Price</th>
+            </thead>
+            <tfoot>
+                <tr><td></td><td>Total: {{cart.total}}</td></tr>
+            </tfoot>
+            {% for item in cart.products.all %}
+            <tr><td>{{item}}</td><td>{{item.price}}</td><td><a  class="del" href="{% url 'single-toy' item.slug %}"><i class="fa fa-trash" aria-hidden="true"></i>
+Remove</a></td></tr>
+            {% endfor %}
+            </table>
+            <a href="{% url 'ship' %}"><button type="button" class="btn btn-primary">Proceed To checkout</button></a>
+            {% else %}
+            <h4>No items in cart,please keep shopping.</h4>
+            <br>
+            {% endif %}
+        
+        </div>
+        <h1>{{joy.title}}</h1>
+    </body>
+</html>

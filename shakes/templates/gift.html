@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <style>
+           /* Basic Styling */
+header {
+  background: #e3da74;
+  width: 100%;
+  height: 300px;
+}
+
+.shop-sign {
+  position: absolute;
+  left: 50%;
+  margin-left: -190px;
+  margin-top: 50px;
+  width: 380px;
+}
+
+.demo {
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  width: 100%;
+  height: 650px;
+}
+
+.contain-all {
+  margin: auto;
+  width: 150px;
+}
+
+a {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+  text-decoration: none;
+  color: white;
+  width: 150px;
+  height: 150px;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-hook {
+  position: relative;
+}
+
+.icon-hook:after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-hook > svg {
+  pointer-events: none;
+}
+
+.contain-card {
+  padding-top: 75px;
+  height: 350px;
+}
+
+.demo-1 {
+  background: #e3da74;
+}
+
+.demo-2 {
+  background: #b2c460;
+}
+
+.demo-3 {
+  background: #f69159;
+}
+
+.demo-4 {
+  background: #fcab54;
+}
+
+.demo-5 {
+  background: #e3da74;
+}
+
+svg {
+  position: absolute;
+  z-index: 5;
+}
+
+.text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.save-text {
+  top: 140px;
+}
+
+.gift-text {
+  top: 150px;
+  left: 2px;
+}
+
+.favorite-text {
+  top: 160px;
+  left: -15px;
+  width: 180px;
+}
+
+.truck-text {
+  top: 170px;
+  left: -20px;
+  width: 180px;
+}
+
+footer {
+  position: relative;
+  background: #e3da74;
+  height: 250px;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+.by-heart {
+  position: absolute;
+  top: -2px;
+}
+
+.by {
+  margin-left: 55px;
+}
+
+.byline {
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+}
+
+.byline:hover {
+  color: #fcab54;
+}
+
+.contain-footer-info {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -200px;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+}
+
+/* Cart Demo 1 */
+.check-1 {
+  opacity: 0;
+  -webkit-transform-origin: center;
+}
+
+.apple-1 {
+  position: absolute;
+  opacity: 0;
+  top: 30px;
+  left: 42px;
+  width: 45px;
+  -webkit-transform: rotate(-40deg);
+}
+
+.active .apple-1 {
+  -webkit-animation: add-apple-1 2s forwards;
+}
+
+.active .cart-plus-1 {
+  -webkit-animation: added 1s forwards;
+}
+
+.active .check-1 {
+  -webkit-animation: checked 1s forwards;
+}
+
+
+@-webkit-keyframes add-apple-1 {
+  50% {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(57px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes added {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes checked {
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Cart Demo 2 */
+.cart-2 {
+  padding-top: 50px;
+}
+
+.lime-1 {
+  position: absolute;
+  top: 96px;
+  left: 37px;
+  -webkit-transform: rotate(-20deg);
+  opacity: 0;
+  width: 55px;
+}
+
+.center-line {
+  stroke-dasharray: 50;  
+}
+
+.check-2 {
+  opacity: 0;
+}
+
+.active .center-line {
+  -webkit-animation: draw-cart 3s forwards;
+}
+
+.active .lime-1 {
+  -webkit-animation: lime-appear 1s 1s forwards;
+}
+
+.active .cart-plus-2 {
+  stroke: #7aa23f;
+}
+
+@-webkit-keyframes lime-appear {
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(.5);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes draw-cart {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke-dashoffset: 50;
+  }
+  50% {
+    stroke-dashoffset: 50;
+  }
+  75% {
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Cart Demo 3 */
+.one {
+  position: absolute;
+  top: 65px;
+  left: 47px;
+  color: #ef9234;
+  font-size: 55px;
+  opacity: 0;
+  -webkit-transform: scale(.1) rotate(260deg);
+}
+
+.center-line-3 {
+  stroke-dasharray: 50;
+}
+
+.active .center-line-3 {
+  -webkit-animation: remove-middle 1s forwards;
+}
+
+.active .one {
+  -webkit-animation: count 1500ms 500ms forwards;
+}
+
+.active .cart-plus-3 {
+  stroke: #7aa23f;
+}
+
+@-webkit-keyframes count {
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-45px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(15px);
+  }
+}
+
+@-webkit-keyframes remove-middle {
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+/* Save Demo 1 */
+.star-icon {
+  left: 25px;
+  width: 80px;
+}
+
+.star-dashes-1 {
+  opacity: 0;
+}
+
+.star-check-1 {
+  opacity: 1;
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+}
+
+.active .star-dashes-1 {
+  -webkit-animation: flash-1 1s forwards;
+}
+
+.active .star-check-1 {
+  -webkit-animation: star-checked-1 1s forwards;
+}
+
+@-webkit-keyframes flash-1 {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes star-checked-1 {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    -webkit-transform-origin: center;
+    -webkit-transform: rotate(360deg) scale(1.5);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Save Demo 2 */
+.star-dashes-2 {
+  opacity: 0;
+  -webkit-transform-origin: center;
+  -webkit-transform: scale(.5);
+}
+
+.active .star-dashes-2 {
+  -webkit-animation: dashes-2 2s forwards;
+}
+
+.active .main-star-2 {
+  fill: yellow;
+  -webkit-transform: rotate(360deg);
+}
+
+@-webkit-keyframes dashes-2 {
+  50% {
+    opacity: 1;
+    stroke: #f9f706;
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Save Demo 3 */
+.main-star-4 {
+  z-index: 10;
+  stroke-dasharray: 310;
+  stroke-dashoffset: 310; 
+}
+
+.active .main-star-4 {
+  -webkit-animation: draw-star-3 2s forwards;
+  fill: #f9f706;
+}
+
+@-webkit-keyframes draw-star-3 {
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Gift Demo 1 */
+.box-icon {
+  left: 30px;
+}
+
+.bow-1 {
+  stroke-dasharray: 140;
+  stroke-dashoffset: -140;
+}
+
+.bow-1-right {
+  stroke-dashoffset: 140;
+}
+
+.active .bow-1 {
+  -webkit-animation: draw-bow-1 1s forwards;
+}
+
+.active .bow-1-right {
+  -webkit-animation: draw-bow-1 1s 1s forwards;
+}
+
+@-webkit-keyframes draw-bow-1 {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Gift Demo 2 */
+.bow-2 {
+  opacity: 0;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+}
+
+.lemon-gift-2 {
+  position: absolute;
+  top: 97px;
+  left: 42px;
+  -webkit-tranform-origin: center;
+  -webkit-transform: scale(.5) rotate(-180deg);
+  opacity: 0;
+  width: 50px;
+}
+
+.active .box-top-2 {
+  -webkit-animation: open-2 2s forwards;
+}
+
+.active .lemon-gift-2 {
+  -webkit-animation: lemon-appear-2 1s 500ms forwards;
+}
+
+.active .bow-2 {
+  -webkit-animation: draw-bow-2 1s 2s forwards;
+}
+
+@-webkit-keyframes draw-bow-2 {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes open-2 {
+  50% {
+    -webkit-transform: translateY(-25px);
+  }
+}
+
+@-webkit-keyframes lemon-appear-2 {
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(-20deg) scale(1);
+  }
+}
+
+/* Gift Demo 3 */
+.bow-3 {
+  opacity: 0;
+  stroke-dasharray: 140;
+  stroke-dashoffset: -140;
+}
+
+.lime-2 {
+  position: absolute;
+  top: 98px;
+  left: 43px;
+  -webkit-transform: rotate(-20deg);
+  opacity: 0;
+  width: 48px;
+}
+
+.active .box-icon-3 {
+  -webkit-animation: expand-gift 1s 1s forwards;
+}
+
+.active .lime-2 {
+  -webkit-animation: show-lime 1s forwards, expand-gift 1s 1s forwards;
+}
+
+.active .bow-3 {
+  -webkit-animation: draw-bow-3 1s 1s forwards;
+}
+
+@-webkit-keyframes show-lime {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes draw-bow-3 {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes expand-gift {
+  50% {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+/* Favorites Demo 1 */
+.heart-icon {
+  top: 75px;
+  left: 22px;
+}
+
+.loader-1 {
+  opacity: 0;
+  -webkit-transform: scale(.3);
+}
+
+.active .heart-1 {
+  -webkit-transform-origin: center;
+  -webkit-animation: grow-heart 500ms 2s forwards;
+  stroke: #ec6d46;
+}
+
+.active .loader-1-l {
+  -webkit-animation: load-1 500ms 500ms forwards;
+}
+
+.active .loader-1-m {
+  -webkit-animation: load-1 500ms 1s forwards;
+}
+
+.active .loader-1-r {
+  -webkit-animation: load-1 500ms 1500ms forwards;
+}
+
+@-webkit-keyframes load-1 {
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: center;
+    -webkit-transform: scale(2);
+  }
+}
+
+@-webkit-keyframes grow-heart {
+  50% {
+    -webkit-transform: scale(.3);
+  }
+}
+
+/* Favorites Demo 2 */
+.heart-2 {
+  -webkit-transform-origin: bottom;
+  transition: stroke 1s 1s ease;
+}
+
+.active .heart-2 {
+  -webkit-animation: heart-beat 1s forwards;
+  stroke: #ec6d46;
+}
+
+@-webkit-keyframes heart-beat {
+  25% {
+    -webkit-transform: scale(.3); 
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+/* Favorites Demo 3 */
+.heart-3 {
+  -webkit-transform-origin: center;
+  stroke-dasharray: 135;
+}
+
+.active .heart-3 {
+  -webkit-animation: draw-heart-3 2s forwards;
+  stroke: #ec6d46;
+}
+
+@-webkit-keyframes draw-heart-3 {
+  0% {
+    stroke-dashoffset: -135;
+    -webkit-transform: scale(.2) rotate(-280deg);
+  }
+  30% {
+    stroke-dashoffset: 135;
+    -webkit-transform: scale(.4) rotate(280deg);
+  }
+  60% {
+    stroke-dashoffset: -135;
+     -webkit-transform: scale(.6);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: #ec6d46;
+  }
+}
+
+/* Truck Icon Demo 1 */
+.truck-icon {
+  top: 60px;
+}
+
+.inside-truck {
+  position: absolute;
+  top: 67px;
+  left: 2px;
+  width: 77px;
+}
+
+.active .truck-back-1 {
+  -webkit-transform-origin: center;
+  -webkit-animation: truck-flip 2s forwards, add-orange 1s 1s forwards;
+}
+
+.active .inside-truck {
+  -webkit-transform-origin: center;
+  -webkit-animation: truck-flip 2s forwards;
+}
+
+.active .tire-plus-1 {
+  -webkit-animation: turn-plus 1s 500ms forwards;
+  stroke: #7aa23f;
+}
+
+@-webkit-keyframes turn-plus {
+  50% {
+    -webkit-transform-origin: center;
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform-origin: center;
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes truck-flip {
+  50% {
+    -webkit-transform: scale(.7);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes add-orange {
+  to {
+    fill: none;
+    stroke: none;
+  }
+}
+
+/* Truck Icon Demo 2 */
+.truck-grapes {
+  position: absolute;
+  top: 67px;
+  left: 20px;
+  -webkit-transform-origin: center;
+  -webkit-transform: scale(.2);
+  opacity: 0;
+  width: 40px;
+}
+
+.active .truck-grapes {
+  -webkit-animation: add-truck-grapes 2s forwards;
+}
+
+.active .tire-plus-2 {
+  -webkit-transform-origin: center;
+  -webkit-animation: drive-plus 1s forwards, enlarge-plus-2 1s 1s forwards;
+  stroke: #7aa23f;
+}
+
+.active .tire-2 {
+  -webkit-transform-origin: center;
+  -webkit-animation: enlarge-plus-2 1s 1s forwards;
+  stroke: #7aa23f;
+}
+
+@-webkit-keyframes drive-plus {
+  1% {
+    -webkit-transform: rotate(-20000deg);
+  }
+}
+
+@-webkit-keyframes enlarge-plus-2 {
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.5);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes add-truck-grapes {
+  1% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+    -webkit-transform: scale(1.2) rotate(260deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(300deg);
+  }
+
+}
+
+/* Truck Icon Demo 3 */
+.dashes {
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  opacity: 0;
+  width: 40px;
+}
+
+.watermelon-truck {
+  position: absolute;
+  top: 60px;
+  left: 6px;
+  z-index: 5;
+  -webkit-transform: rotateX(90deg);
+  width: 70px;
+}
+
+.active .watermelon-truck {
+  -webkit-animation: add-melon 1s forwards;
+}
+
+.active .dashes {
+  -webkit-animation: fast 1s 500ms forwards;
+}
+
+.active .tire-plus-3 {
+  -webkit-transform-origin: center;
+  -webkit-animation: drive-3 1500ms 500ms forwards;
+  stroke: #7aa23f;
+}
+
+@-webkit-keyframes drive-3 {
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes fast {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes add-melon {
+  to {
+    -webkit-transform: rotateX(360deg);
+  }
+}
+
+/* Footer Heart */
+.by-heart-path {
+  stroke-dasharray: 7;
+  -webkit-animation: move-heart 1s infinite;
+}
+
+@-webkit-keyframes move-heart {
+  50% {
+    stroke-dashoffset: 40;
+  }
+}
+
+/* Media query for layout */
+@media (min-width: 800px) {
+  .demo {
+    height: 250px;
+  }
+
+  .contain-all {
+    margin: auto;
+    width: 765px;
+  }
+
+  a {
+    display: inline-block;
+    margin-right: 150px;
+  }
+
+  
+
+  .contain-icon:last-of-type {
+    margin-right: 0;
+  }
+
+}
+
+        </style>
+        
+    </head>
+    <body>
+         
+
+<div class="demo demo-2">
+    <div class="contain-all">
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Third Star Icon-->
+        <svg class="star-icon star-icon-3" version="1.1" width="106px" height="103px" viewBox="0 0 105.602 102.931">
+          <path class="main-star-3" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M52.35,3.11c0.475-0.963,1.253-0.963,1.728,0 l12.211,24.742c0.475,0.963,1.734,1.877,2.796,2.032l27.305,3.968c1.063,0.154,1.303,0.894,0.534,1.644L77.167,54.754
+          c-0.769,0.75-1.25,2.229-1.068,3.287l4.664,27.194c0.182,1.058-0.448,1.516-1.398,1.016L54.942,73.413
+          c-0.951-0.5-2.506-0.5-3.456,0L27.064,86.252c-0.951,0.5-1.58,0.043-1.398-1.016l4.664-27.194c0.182-1.058-0.299-2.538-1.068-3.287
+          L9.504,35.495c-0.769-0.75-0.529-1.489,0.534-1.644l27.305-3.968c1.063-0.154,2.321-1.069,2.796-2.032L52.35,3.11z"/>
+          <path class="main-star-4" fill="none" stroke="#f9f706" stroke-width="6" stroke-miterlimit="10" d="M52.35,3.11c0.475-0.963,1.253-0.963,1.728,0  l12.211,24.742c0.475,0.963,1.734,1.877,2.796,2.032l27.305,3.968c1.063,0.154,1.303,0.894,0.534,1.644L77.167,54.754
+          c-0.769,0.75-1.25,2.229-1.068,3.287l4.664,27.194c0.182,1.058-0.448,1.516-1.398,1.016L54.942,73.413
+          c-0.951-0.5-2.506-0.5-3.456,0L27.064,86.252c-0.951,0.5-1.58,0.043-1.398-1.016l4.664-27.194c0.182-1.058-0.299-2.538-1.068-3.287
+          L9.504,35.495c-0.769-0.75-0.529-1.489,0.534-1.644l27.305-3.968c1.063-0.154,2.321-1.069,2.796-2.032L52.35,3.11z"/>
+        </svg>
+        <!--End Third Star Icon-->
+        <span class="text save-text">Save for Later</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="demo demo-3">
+    <div class="contain-all">
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin First Gift Icon-->
+        
+
+      <a href="#" class="contain-icon icon-hook">
+      <!--Begin Gift Star Icon-->
+        <svg class="box-icon box-icon-2" version="1.1" width="74px" height="89px" viewBox="0 0 74.479 89.141">
+          <path class="box-bottom-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M67.874,84.885
+          c0,1.173-0.959,2.132-2.132,2.132H8.737c-1.173,0-2.132-0.959-2.132-2.132V44.389c0-1.173,0.959-2.132,2.132-2.132h57.005 c1.173,0,2.132,0.959,2.132,2.132V84.885z"/>
+          <path class="box-top-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M72.354,41.018
+          c0,0.655-0.536,1.191-1.191,1.191H3.315c-0.655,0-1.191-0.536-1.191-1.191v-9.795c0-0.655,0.536-1.191,1.191-1.191h67.849 c0.655,0,1.191,0.536,1.191,1.191V41.018z"/>
+          <path class="bow-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M36.491,87.017c0,0,0-56.14,0-56.976c0-9.195,1.934-26.713-11.045-27.872c-9.035-0.807-14.344,9.487-11.634,17.091 c3.113,8.734,14.479,10.773,22.678,10.773"/>
+          <path class="bow-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M37.988,87.017c0,0,0-56.14,0-56.976c0-9.195-1.934-26.713,11.045-27.872c9.035-0.807,14.344,9.487,11.634,17.091
+          c-3.113,8.734-14.479,10.773-22.678,10.773"/>
+        </svg>
+        <!--End Second Gift Icon-->
+        <img class="lemon-gift-2" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/lemon.svg" alt="Lemon Icon" />
+        <span class="text gift-text">This is a Gift</span>
+      </a>
+
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Third Gift Icon-->
+        <svg class="box-icon box-icon-3" version="1.1" width="74px" height="89px" viewBox="0 0 74.479 89.141">
+          <path class="box-bottom-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M67.874,84.885
+          c0,1.173-0.959,2.132-2.132,2.132H8.737c-1.173,0-2.132-0.959-2.132-2.132V44.389c0-1.173,0.959-2.132,2.132-2.132h57.005 c1.173,0,2.132,0.959,2.132,2.132V84.885z"/>
+          <path class="box-top-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M72.354,41.018
+          c0,0.655-0.536,1.191-1.191,1.191H3.315c-0.655,0-1.191-0.536-1.191-1.191v-9.795c0-0.655,0.536-1.191,1.191-1.191h67.849 c0.655,0,1.191,0.536,1.191,1.191V41.018z"/>
+          <path class="bow-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M36.491,87.017c0,0,0-56.14,0-56.976c0-9.195,1.934-26.713-11.045-27.872c-9.035-0.807-14.344,9.487-11.634,17.091   c3.113,8.734,14.479,10.773,22.678,10.773"/>
+          <path class="bow-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M37.988,87.017c0,0,0-56.14,0-56.976c0-9.195-1.934-26.713,11.045-27.872c9.035-0.807,14.344,9.487,11.634,17.091
+          c-3.113,8.734-14.479,10.773-22.678,10.773"/>
+        </svg>
+        <!--End Third Gift Icon-->
+        <img class="lime-2" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/lime.svg" alt="Lime Icon" />
+        <span class="text gift-text">This is a Gift</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="demo demo-4">
+    <div class="contain-all">
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin First Favorite Icon-->
+        <svg class="heart-icon heart-icon-1" version="1.1" width="91px" height="85px" viewBox="0 0 90.65 85.04">
+          <path class="heart-1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M45.137,23.041c4.912-24.596,40.457-27.775,42.128-0.435c1.398,22.88-21.333,40.717-42.128,50.522 M45.137,23.041
+          C40.225-1.555,5.057-4.734,3.387,22.606c-1.398,22.88,20.955,40.717,41.75,50.522"/>
+          <circle class="loader-1 loader-1-l" fill="#ec6d46" stroke="none" stroke-miterlimit="10" cx="25.173" cy="39.773" r="5.014"/>
+          <circle class="loader-1 loader-1-r" fill="#ec6d46" stroke="none" stroke-miterlimit="10" cx="65.477" cy="39.773" r="5.014"/>
+          <circle class="loader-1 loader-1-m" fill="#ec6d46" stroke="none" stroke-miterlimit="10" cx="45.325" cy="39.773" r="5.014"/>
+        </svg>
+        <!--End First Favorite Icon-->  
+        <span class="text favorite-text">Add to Favorites</span>
+      </a>
+
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Second Favorite Icon-->
+        <svg class="heart-icon heart-icon-2" version="1.1" width="91px" height="85px" viewBox="0 0 90.65 85.04">
+          <path class="heart-2" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M45.137,23.041c4.912-24.596,40.457-27.775,42.128-0.435c1.398,22.88-21.333,40.717-42.128,50.522 M45.137,23.041
+          C40.225-1.555,5.057-4.734,3.387,22.606c-1.398,22.88,20.955,40.717,41.75,50.522"/> 
+        </svg>        
+        <!--End Second Favorite Icon-->    
+        <span class="text favorite-text">Add to Favorites</span>
+      </a>
+
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Third Favorite Icon-->
+        <svg class="heart-icon heart-icon-3" version="1.1" width="91px" height="85px" viewBox="0 0 90.65 85.04">
+          <path class="heart-3" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M45.137,23.041c4.912-24.596,40.457-27.775,42.128-0.435c1.398,22.88-21.333,40.717-42.128,50.522 M45.137,23.041
+          C40.225-1.555,5.057-4.734,3.387,22.606c-1.398,22.88,20.955,40.717,41.75,50.522"/>
+        </svg>
+        <!--End Third Favorite Icon-->  
+        <span class="text favorite-text">Add to Favorites</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="demo demo-5">
+    <div class="contain-all">
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin First Truck Icon-->
+        <svg class="truck-icon" version="1.1" width="133px" height="111px" viewBox="0 0 96.71 73.53">
+          <path class="truck-back-1" fill="#e3da74" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M56.439,43.455c0,1.488-1.206,2.695-2.695,2.695H5.541c-1.488,0-2.695-1.206-2.695-2.695V5.432c0-1.488,1.206-2.695,2.695-2.695  h48.203c1.488,0,2.695,1.206,2.695,2.695V43.455z"/>
+          <line class="truck-base-1" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="93.414" y1="51.539" x2="3.296" y2="51.539"/>
+          <path class="truck-cab-1" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M61.379,51.539V10.386c0-1.297,1.061-2.357,2.357-2.357H80.8c1.297,0,2.827,0.951,3.4,2.114l6.824,13.833  c0.574,1.163,1.043,3.175,1.043,4.472v23.091"/>
+          <circle class="tire-1" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="18.239" cy="61.542" r="9.14"/>
+          <path class="tire-plus-1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M14.425,65.193l7.628-7.304 M14.587,57.728l7.304,7.628"/>
+          <circle class="tire-1" class="tire" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="77.247" cy="61.542" r="9.14"/>
+          <path class="tire-plus-1" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M73.433,65.193l7.628-7.304 M73.595,57.728l7.304,7.628"/>
+          <path class="window-1" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M84.283,25.192c0,1.488-0.757,2.695-2.245,2.695H69.612c-1.488,0-2.695-1.206-2.695-2.695v-8.383c0-1.488,1.206-2.695,2.695-2.695 h8.383c1.488,0,2.395,0.748,3.144,2.695L84.283,25.192z"/>
+        </svg>
+        <!--End First Truck Icon-->
+        <img class="inside-truck" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/insidetruck.svg" alt="Orange Inside Truck" />
+        <span class="text truck-text">Ground Shipping</span>
+      </a>
+
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Second Truck Icon-->
+        <svg class="truck-icon" version="1.1" width="133px" height="111px" viewBox="0 0 96.71 73.53">
+          <path class="truck-back-2" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M56.439,43.455c0,1.488-1.206,2.695-2.695,2.695H5.541c-1.488,0-2.695-1.206-2.695-2.695V5.432c0-1.488,1.206-2.695,2.695-2.695 h48.203c1.488,0,2.695,1.206,2.695,2.695V43.455z"/>
+          <line class="truck-base-2" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="93.414" y1="51.539" x2="3.296" y2="51.539"/>
+          <path class="truck-cab-2" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M61.379,51.539V10.386c0-1.297,1.061-2.357,2.357-2.357H80.8c1.297,0,2.827,0.951,3.4,2.114l6.824,13.833     c0.574,1.163,1.043,3.175,1.043,4.472v23.091"/>
+          <circle class="tire-2" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="18.239" cy="61.542" r="9.14"/>
+          <path class="tire-plus-2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M14.425,65.193l7.628-7.304 M14.587,57.728l7.304,7.628"/>
+          <circle class="tire-2" class="tire" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="77.247" cy="61.542" r="9.14"/>
+          <path class="tire-plus-2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M73.433,65.193l7.628-7.304 M73.595,57.728l7.304,7.628"/>
+          <path class="window-2" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M84.283,25.192c0,1.488-0.757,2.695-2.245,2.695H69.612c-1.488,0-2.695-1.206-2.695-2.695v-8.383c0-1.488,1.206-2.695,2.695-2.695      h8.383c1.488,0,2.395,0.748,3.144,2.695L84.283,25.192z"/>
+        </svg>
+        <!--End Second Truck Icon-->
+        <img class="truck-grapes" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/grapes.svg" alt="Grapes Icon" />
+        <span class="text truck-text">Ground Shipping</span>
+      </a>
+
+      <a href="#" class="contain-icon icon-hook">
+        <!--Begin Third Truck Icon-->
+        <svg class="truck-icon" version="1.1" width="133px" height="111px" viewBox="0 0 96.71 73.53">
+          <path class="truck-back-3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M56.439,43.455c0,1.488-1.206,2.695-2.695,2.695H5.541c-1.488,0-2.695-1.206-2.695-2.695V5.432c0-1.488,1.206-2.695,2.695-2.695   h48.203c1.488,0,2.695,1.206,2.695,2.695V43.455z"/>
+          <line class="truck-base-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="93.414" y1="51.539" x2="3.296" y2="51.539"/>
+          <path class="truck-cab-3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M61.379,51.539V10.386c0-1.297,1.061-2.357,2.357-2.357H80.8c1.297,0,2.827,0.951,3.4,2.114l6.824,13.833     c0.574,1.163,1.043,3.175,1.043,4.472v23.091"/>
+          <circle class="tire-3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="18.239" cy="61.542" r="9.14"/>
+          <path class="tire-plus-3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M14.425,65.193l7.628-7.304 M14.587,57.728l7.304,7.628"/>
+          <circle class="tire-3" class="tire" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="77.247" cy="61.542" r="9.14"/>
+          <path class="tire-plus-3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M73.433,65.193l7.628-7.304 M73.595,57.728l7.304,7.628"/>
+          <path class="window-3" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+          M84.283,25.192c0,1.488-0.757,2.695-2.245,2.695H69.612c-1.488,0-2.695-1.206-2.695-2.695v-8.383c0-1.488,1.206-2.695,2.695-2.695       h8.383c1.488,0,2.395,0.748,3.144,2.695L84.283,25.192z"/>
+        </svg>
+        <!--End Third Truck Icon-->
+        <img class="dashes" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/dashes.svg" alt="Motion Lines" />
+        <img class="watermelon-truck" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/watermelon.svg" alt"Watermelon Icon" />
+        <span class="text truck-text">Ground Shipping</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contain-footer-info">
+     <span class="made-with">Made with</span>
+     <svg class="by-heart" version="1.1" width="50px" height="34px" viewBox="0 0 90.65 85.04">
+        <path class="by-heart-path" fill="none" stroke="#ea6b46" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+        M45.137,23.041c4.912-24.596,40.457-27.775,42.128-0.435c1.398,22.88-21.333,40.717-42.128,50.522 M45.137,23.041
+        C40.225-1.555,5.057-4.734,3.387,22.606c-1.398,22.88,20.955,40.717,41.75,50.522"/> 
+      </svg> 
+      <span class="by">by<a href="http://jonibologna.com/" class="byline">Joni Trythall</a></span>
+    </div>
+  </footer>
+
+        <script>
+            icons = document.querySelectorAll('.icon-hook');
+
+// Cycle through list
+for (var i = 0; i < icons.length; i++) {
+  icons[i].addEventListener('click', function(event) {
+    event.preventDefault();
+ 
+    var icon = this;
+    var currentClass = icon.getAttribute('class'); // The starting class
+
+    console.log(icon);
+
+    if (currentClass.indexOf('active') > -1) { 
+      // Remove .active
+      icon.setAttribute('class', currentClass.replace(' active', ''));
+    } else { 
+      // Add .active
+      icon.setAttribute('class', currentClass + ' active');
+    }
+  }, false);
+}
+        </script>
+    </body>
+</html>

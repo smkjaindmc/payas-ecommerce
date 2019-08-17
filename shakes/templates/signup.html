@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="/static/signup.css">
+    </head>
+    <body>
+        
+            
+        <form method="POST">
+        <div class="form-structor">
+            {% csrf_token %}
+            
+	<div class="signup">
+        
+		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+		<div class="form-holder">
+			
+            {{form.username}}
+			
+            {{form.email}}
+			{% if messages %}
+               <ul class="messages">
+                   {% for msg in messages %}
+                   <li>
+                       <div class="alert alert-{{msg.level_tag}}" role="alert">
+                           {{msg.message}}
+                       </div>
+                   </li>
+                   {% endfor %}
+               </ul>
+               {% endif %}
+            {{form.password}}
+		</div>
+		<button type="submit" value="submit" class="submit-btn">Sign up</button>
+	</div>
+	
+</div>
+        </form>
+        <script src="/static/signup.js"></script>
+    </body>
+</html>
