@@ -3,57 +3,246 @@
     <head>
         <title>Ship</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
-            h2{
-                margin-top: 20px;
-            }
-            select{
-                margin-top: 30px;
-            }
-            h5{
-                margin-top: 30px;
-            }
-            button{
-                margin-top: 30px;
-            }
-            body{
-                background: url('/static/back.jpg')
-            }
-            .cont{
-                margin-left: 580px;
-            }
+            @import url("https://fonts.googleapis.com/css?family=Arimo");
+body {
+  display: flex;
+  justify-content: center;
+    background-image: url(/static/back.jpg);
+}
+
+.wrapper {
+  margin-top: 5%;
+  width: 60%;
+  display: flex;
+    margin-left: 300px;
+  justify-content: center;
+  font-family: "Arimo";
+  background-color: #eb9478;
+  -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+  animation: slideUp 2000ms ease;
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.container {
+  width: 65%;
+  padding: 5% 10%;
+}
+
+h1 {
+  align-self: center;
+}
+
+form {
+  width: 100%;
+}
+form > * {
+  margin-top: 20px;
+}
+form input {
+  width: 100%;
+  min-height: 25px;
+  border: 0;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  font-family: "Arimo";
+  margin-top: 5px;
+  color: #8e2807;
+  border-radius: 4px;
+}
+form label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #8e2807;
+}
+form h1 {
+  font-size: 24px;
+  line-height: 10px;
+  color: #493b76;
+  letter-spacing: 1px;
+}
+form h1:nth-of-type(2) {
+  margin-top: 10%;
+}
+
+.name {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.name div {
+  width: 45%;
+}
+
+.address-info {
+  display: flex;
+  justify-content: space-between;
+}
+.address-info div {
+  width: 30%;
+}
+
+.cc-info {
+  display: flex;
+  justify-content: space-between;
+}
+.cc-info div {
+  width: 45%;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.btns button {
+  margin: 50px 120px;;
+  height: 30px;
+  width: 40%;
+  color: #cfc9e1;
+  background-color: #4a3b76;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: .3rem;
+  letter-spacing: 2px;
+}
+.btns button:hover {
+  animation-name: btn-hov;
+  animation-duration: 550ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-hov {
+  100% {
+    background-color: #cfc9e1;
+    color: #4a3b76;
+    transform: scale(1.05);
+  }
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 736px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .btns {
+    align-items: center;
+  }
+  .btns button {
+    width: 50%;
+  }
+
+  form h1 {
+    text-align: center;
+  }
+
+  .name,
+  .address-info,
+  .cc-info {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .name div,
+  .address-info div,
+  .cc-info div {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+  }
+
+  .street,
+  .cc-num {
+    text-align: center;
+      margin-top: 200px;
+  }
+
+  input {
+    margin: 5px 0;
+    min-height: 30px;
+  }
+}
+            
         </style>
+        
     </head>
     <body>
-        <div class="cont">
-            <h2>Add shipping adress</h2>
-            <select name='States' id=''>
-                <option value="Mp">Locality</option>
-                <option value="Mp">Gole Ka Mandir</option>
-                <option value="Mp">Hazeera</option>
-                <option value="Mp">City Center</option>
-                <option value="Mp">Tansen Nagar</option>
-                <option value="Mp">Lashkar</option>
-                <option value="Mp">Morar</option>
-                <option value="Mp">Bada</option>
-                <option value="Mp">Phoolbagh</option>
-                <option value="Mp">Railway station</option>
-                <option value="Mp">Mragnayani Garden</option>
-                <option value="Mp">Gast Ka Tazia</option>
-                <option value="Mp">Morena Link Road</option>
-                
-            </select>
-            <h5>Full Name</h5>
-            <input type='text' placeholder='enter name' size=50>
-            <h5>Mobile Number</h5>
-            <input type='digits' placeholder='10 digit mobile number without prefixes' size=50>
-            <h5>Pin Code</h5>
-            <input type='digits' placeholder='enter pincode' size=50>
-            <h5>Street adress</h5>
-            <input type='digits' placeholder='Flat/House no/floor/building name' size=50>
-            <br>
+        <form action="{% url 'addcustomer' %}" method="post">
+            {% csrf_token %}
+        <div class="wrapper">
+    <div class="container">
+        <form action="">
+            <h1>
+                <i class="fa fa-truck" aria-hidden="true"></i>
+
+                Shipping Details
+            </h1>
+            <div class="street">
+                <label for="name">Name</label>
+                {{forms.name}}
+            </div>
+            <div class="street">
+                <label for="name">Email</label>
+                {{forms.email}}
+            </div>
+            <div class="street">
+                <label for="name">Phone</label>
+                {{forms.phone}}
+            </div>
+            <div class="street">
+                <label for="name">Street</label>
+                {{forms.adress}}
+            </div>
+            <div class="street">
+                    <label for="zip">Zip</label>
+                    {{forms.zipcode}}
+                </div>
+            <div class="street">
+                    <label for="city">City</label>
+                    {{forms.city}}
+                </div>
+            <div class="street">
+                    <label for="state">State</label>
+                    {{forms.state}}
+                </div>
             
-            <button type="button" class="btn btn-warning">Add address</button>
-        </div>
+            
+            <div class="btns">
+                <button type="submit">Purchase</button>
+                
+            </div>
+        </form>
+    </div>
+            </div>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

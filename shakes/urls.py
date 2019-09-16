@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from .import views
 from products.models import Product
+from django.contrib.auth import views as auth_views
 urlpatterns=[
     url(r'^fruits/',views.shakes),
     url(r'^fruit/',views.fruit,name='fruit'),
@@ -18,8 +19,13 @@ urlpatterns=[
     url(r'^rewards',views.reward,name='reward'),
     url(r'^prof',views.profile,name='prof'),
     url(r'^ship',views.ship,name='ship'),
+    url(r'^addcustomer',views.addcustomer,name='addcustomer'),
     url(r'^branch',views.branch,name='branch'),
     url(r'^cont',views.cont,name='cont'),
     url(r'^test2',views.test2,name='test2'),
-    url(r'^logout',views.logout_view,name='logo')
+    url(r'^logout',views.logout_view,name='logo'),
+    url(r'^error',views.error,name='error'),
+    url(r'^login',views.login_view,name='contact'),
+    url(r'^handlerequest/',views.handlerequest,name='HandleRequest'),
+    
 ]

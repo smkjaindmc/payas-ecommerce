@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/',admin.site.urls),
     url(r'^shakes/',include('shakes.urls')),
-    
+    path('shakes/', include('django.contrib.auth.urls')),
+    url(r'^accounts/',include('shakes.urls')),
 ]
 urlpatterns+=staticfiles_urlpatterns()

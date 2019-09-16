@@ -38,5 +38,14 @@ class RegisterForms(forms.ModelForm):
         email_qs=User.objects.filter(email=email)
         if email_qs.exists():
             raise forms.ValidationError("This email is already being used")
-        return email    
+        return email
+class CheckoutForms(forms.Form):
+    name=forms.CharField(max_length=100)
+    email=forms.CharField(max_length=100)
+    phone=forms.CharField(max_length=100)
+    zipcode=forms.CharField(max_length=100)
+    adress=forms.CharField(max_length=100)
+    city=forms.CharField(max_length=100)
+    state=forms.CharField(max_length=100)
+    
     

@@ -1,11 +1,15 @@
 from django.shortcuts import render,redirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import UserLoginForm,RegisterForms
-from .models import Register
+from .forms import UserLoginForm,RegisterForms,CheckoutForms
+from .models import Register, Checkout
 from products.models import Product
 from cart.models import Cart
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
+from paytm import Checksum
+from django.http import HttpResponse
+MERCHANT_KEY = 'rtglPAZ0#g1OtOHR';
 from django.contrib.auth import (
     authenticate,
     get_user_model,
@@ -170,7 +174,8 @@ def profile(request):
     context={'data':q,'username':p,'last': z}
     return render(request,'profile.html',context)
 def ship(request):
-    return render(request,'ship.html')
+    context={"forms":CheckoutForms}
+    return render(request,'ship.html',context)
 def branch(request):
     return render(request,'branch.html')
 def cont(request):
@@ -186,3 +191,55 @@ def test2(request):
 def logout_view(request):
     logout(request)
     return render(request,'fruit.html')
+def error(request):
+    return render(request,'error.html')
+def addcustomer(request):
+    form= CheckoutForms(request.POST)
+    cart=Cart.objects.all()
+    m=len(Checkout.objects.all())
+    l=len(cart)
+    cart=cart[l-1]
+    if form.is_valid():
+        register=Checkout(name=form.cleaned_data['name'],
+                          email=form.cleaned_data['email'],
+                          phone=form.cleaned_data['phone'],
+                          adress=form.cleaned_data['adress'],
+                          zipcode=form.cleaned_data['zipcode'],
+                         city=form.cleaned_data['city'],
+                         state=form.cleaned_data['state'],
+                         amount=cart.total,
+                         order_id=m)
+    register.save()
+    id=register.order_id
+    param_dict = {
+
+                'MID': 'kIDPCg37721409585673',
+                'ORDER_ID': str(id),
+                'TXN_AMOUNT': str(register.amount),
+                'CUST_ID': register.email,
+                'INDUSTRY_TYPE_ID': 'Retail',
+                'WEBSITE': 'WEBSTAGING',
+                'CHANNEL_ID': 'WEB',
+                'CALLBACK_URL':'http://localhost:8000/accounts/handlerequest/',
+
+        }
+    param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
+    return render(request, 'paytm.html', {'param_dict': param_dict})
+    #return render(request,'fruit.html')
+@csrf_exempt
+def handlerequest(request):
+    form = request.POST
+    response_dict = {}
+    for i in form.keys():
+        response_dict[i] = form[i]
+        if i == 'CHECKSUMHASH':
+            checksum = form[i]
+
+    verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
+    if verify:
+        if response_dict['RESPCODE'] == '01':
+            print('order successful')
+        else:
+            print('order was not successful because' + response_dict['RESPMSG'])
+    return render(request, 'shopping.html', {'response': response_dict})
+    #return HttpResponse('Done')
