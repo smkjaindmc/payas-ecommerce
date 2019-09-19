@@ -1,5 +1,5 @@
 # payas-ecommerce
-This is a website made with django(python web framework),react,javascript,html,css and jquery.
+This is a website made with django(python web framework),react,javascript,html,css and jquery. Uses sqlite database.
 Ecommerce website made for selling juices, shakes and cakes.
 Contains a menu bar which diaplays branches of payas, about payas, menu, login, reviews, help.
 User has to create a account and after that he can login into his account.
