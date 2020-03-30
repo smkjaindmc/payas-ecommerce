@@ -9,7 +9,9 @@ A checkout option is there, clicking which directs to the paytm payment page.
 After making payment, a bill is generated.
 User can also rate the purchased product.
 
+### Link of hosted website:-
 
+payasweb.herokuapp.com     // while hosting images failed to load from server
 
 ### Video link of project:-
 
