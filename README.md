@@ -8,3 +8,16 @@ User can also view his previous orders.
 A checkout option is there, clicking which directs to the paytm payment page.
 After making payment, a bill is generated.
 User can also rate the purchased product.
+
+### Project Setup
+Create virtual environment
+
+Inside virtual environment, 
+
+pip install django
+
+Then run server:- python manage.py runserver
+
+Video link of project:-
+
+https://drive.google.com/open?id=1-Jd8MX_E7bwpjWr2gvHYrQlb35QY7iZJ
