@@ -16,3 +16,6 @@ payasweb.herokuapp.com                     // while hosting images failed to loa
 ### Video link of project:-
 
 https://drive.google.com/open?id=1-Jd8MX_E7bwpjWr2gvHYrQlb35QY7iZJ
+
+### Link of Project Documentation:-
+https://drive.google.com/file/d/1fl5dhm1JtU0I_r3Ajxjt-OAg32UFUEdT/view?usp=sharing
